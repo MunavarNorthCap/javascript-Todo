@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo pure JS</title>
+</head>
+<body>
+    <section id="sec">
+        <h1 id="head">TODO Pure JS</h1>
+        
+        <form action="" id="form" onsubmit="event.preventDefault()">
+            <div id="divOne">
+                <label class="custom-radio">
+                    <input type="radio" />
+                    <span class="checkmark"></span>
+                </label>
+                <input type="text" class="td" id="todoInput" value="" />
+            </div>
+            <button class="btn btn-primary" onclick="add()">ADD</button>
+        </form>
+    </section>
+
+    <div id="content">
+        <ul id="todoList">
+            <!-- <li>
+                <input type="radio" />
+                <li>some txt</li>
+                <button onclick="trashBtn()">trash</button>
+            </li> -->
+        </ul>
+    </div>
+
+    <div id="filter-todo" class="select">
+        <span id="incrementVal" class="word"></span>
+        <span style="margin: 0; padding: 3px;">item left</span>
+        <option value="all" class="word" onclick="showAll()">All</option>
+        <option value="active" class="word" onclick="active()">Active</option>
+        <option value="completed" class="word" onclick="completed()">Completed</option>
+        <option value="clearcompleted" class="word" onclick="clearCompleted()">Clear Completed</option>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
